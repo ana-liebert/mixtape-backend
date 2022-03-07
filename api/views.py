@@ -1,47 +1,22 @@
 from django.shortcuts import render
 from django.views import View 
-from django.http import JsonResponse
+from django.http import HttpResponse
 
 # Create your views here.
 
 class Home(View):
-    def get(self, request):
-        return JsonResponse("Mixtape Homepage", safe=False)
+    def get(self, request, *args, **kwargs):
+        
+        return HttpResponse("Mixtape Homepage")
 
 
-class Discover(View):
-    def get(self, request):
-        return JsonResponse("Discover page", safe=False)
+class DiscoverIndex(View):
+    def get(self, request, *args, **kwargs):
+        return HttpResponse("Discover page")
 
-# JON HASSELL 
-# Toucan Ocean
-# KAMURAN AKKOR 
-# Ikimiz Bir Fidaniz
-# ESMERAY 
-# Ayrılık Olsa Bile
-# BIG THIEF 
-# Blurred View
-# ESG 
-# Moody
-# MUSTAFA SANDAL 
-# Jest Oldu
-# SHAMIR 
-# On The Regular
-# GÜLŞEN 
-# Be Adam
-# LÉA SEN
-# Hyasynth
-# P J HARVEY 
-# Rid Of Me
-# KEIYAA 
-# Forreal???
-# DUENDITA
-# Bury Me
-# MAZHAR VE FUAT 
-# Adımız Miskindir Bizim
-# KADER 
-# Adamım
-# ÖZDEMIR ERDOĞAN 
-# Gurbet
-# NEŞE KARABÖCEK 
-# Kemanci
+class MixDetail(View):
+    def get(self, request, id, *args, **kwargs):
+        print("args are", args)
+        print("kwargs are", kwargs)
+        # ^kwards are the param typed into the url
+        return HttpResponse(f"<h1> Hello {id} </h1>")
