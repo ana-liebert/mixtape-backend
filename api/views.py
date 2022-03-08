@@ -1,38 +1,31 @@
 from django.shortcuts import render
 from django.views import View 
 from django.http import HttpResponse
-from .models import Host, Mix  
+from .models import Host, Mix, Genre, UserProfile  
 from rest_framework import viewsets
 from rest_framework import permissions
-from .serializers import HostSerializer, MixSerializer 
-
-
-# Create your views here.
-
-# class Home(View):
-#     def get(self, request, *args, **kwargs):
-        
-#         return HttpResponse("Mixtape Homepage")
-
-
-# class DiscoverIndex(View):
-#     def get(self, request, *args, **kwargs):
-#         return HttpResponse("Discover page")
-
-# class MixDetail(View):
-#     def get(self, request, id, *args, **kwargs):
-#         print("args are", args)
-#         print("kwargs are", kwargs)
-#         # ^kwards are the param typed into the url
-#         return HttpResponse(f"<h1> Hello {id} </h1>")
+from .serializers import MixSerializer, HostSerializer, GenreSerializer, UserProfileSerializer
+from rest_framework.views import APIView
+from rest_framework.response import Response
+from rest_framework import status
 
 
 class HostViewSet(viewsets.ModelViewSet):  
     queryset = Host.objects.all()  
     serializer_class = HostSerializer
-    permission_classes = [permissions.IsAuthenticated]  
+    # permission_classes = [permissions.IsAuthenticatedOrReadOnly]  
 
-class MixViewSet(viewsets.ModelViewSet):  
+
+class MixViewSet(viewsets.ModelViewSet):
     queryset = Mix.objects.all().order_by('created_at')
     serializer_class = MixSerializer
-    permission_classes = [permissions.IsAuthenticated]  
+    # permission_classes = [permissions.IsAuthenticatedOrReadOnly]
+
+class GenreViewSet(viewsets.ModelViewSet):  
+    queryset = Genre.objects.all()
+    serializer_class = GenreSerializer
+    # permission_classes = [permissions.IsAuthenticatedOrReadOnly]  
+
+class UserProfileViewSet(viewsets.ModelViewSet):
+    queryset = UserProfile.objects.all()
+    serializer_class = UserProfileSerializer
