@@ -5,9 +5,7 @@ from .models import Host, Mix, Genre, UserProfile
 from rest_framework import viewsets
 from rest_framework import permissions
 from .serializers import MixSerializer, HostSerializer, GenreSerializer, UserProfileSerializer
-from rest_framework.views import APIView
-from rest_framework.response import Response
-from rest_framework import status
+
 
 
 class HostViewSet(viewsets.ModelViewSet):  

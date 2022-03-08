@@ -26,6 +26,5 @@ router.register(r'profile', views.UserProfileViewSet, 'profile'),
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    # path('', include('api.urls')),
     path('mixtape/', include(router.urls)),
 ]
