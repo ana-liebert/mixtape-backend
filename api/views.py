@@ -1,10 +1,13 @@
 from django.shortcuts import render
 from django.views import View 
 from django.http import HttpResponse
-from .models import Host, Mix, Genre, UserProfile  
+from .models import Host, Mix, Genre, UserProfile, User  
 from rest_framework import viewsets
 from rest_framework import permissions
-from .serializers import MixSerializer, HostSerializer, GenreSerializer, UserProfileSerializer
+from .serializers import MixSerializer, HostSerializer, GenreSerializer, UserProfileSerializer, RegistrationSerializer
+from rest_framework.response import Response 
+from rest_framework.views import APIView
+from rest_framework.decorators import api_view
 
 
 
@@ -27,3 +30,7 @@ class GenreViewSet(viewsets.ModelViewSet):
 class UserProfileViewSet(viewsets.ModelViewSet):
     queryset = UserProfile.objects.all()
     serializer_class = UserProfileSerializer
+
+class UserView(viewsets.ModelViewSet):
+    queryset = User.objects.all()
+    serializer_class = RegistrationSerializer
