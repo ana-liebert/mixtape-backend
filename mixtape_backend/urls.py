@@ -18,6 +18,12 @@ from django.urls import path, include
 from rest_framework import routers
 from api import views
 from django.contrib.auth import views as auth_views
+from rest_framework_simplejwt.views import (
+    TokenObtainPairView,
+    TokenRefreshView,
+)
+# from auth.views import MyObtainTokenPairView
+# from rest_framework_simplejwt.views import TokenRefreshView
 
 
 
@@ -31,4 +37,8 @@ router.register(r'register', views.UserView, 'register'),
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('mixtape/', include(router.urls)),
+    path('login/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
+    path('login/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
+    # path('login/', MyObtainTokenPairView.as_view(), name='token_obtain_pair'),
+    # path('login/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
 ]

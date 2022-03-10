@@ -4,12 +4,14 @@ from django.http import HttpResponse
 from .models import Host, Mix, Genre, UserProfile, User  
 from rest_framework import viewsets
 from rest_framework import permissions
-from .serializers import MixSerializer, HostSerializer, GenreSerializer, UserProfileSerializer, RegistrationSerializer
-from rest_framework.response import Response 
-from rest_framework.views import APIView
-from rest_framework.decorators import api_view
+from .serializers import MixSerializer, HostSerializer, GenreSerializer, UserProfileSerializer, RegistrationSerializer 
+# MyTokenObtainPairSerializer
+from rest_framework.permissions import AllowAny
+from rest_framework_simplejwt.views import TokenObtainPairView
 
-
+# class MyObtainTokenPairView(TokenObtainPairView):
+#     permission_classes = (AllowAny,)
+#     serializer_class = MyTokenObtainPairSerializer   
 
 class HostViewSet(viewsets.ModelViewSet):  
     queryset = Host.objects.all()  

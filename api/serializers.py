@@ -1,5 +1,6 @@
 from .models import Host, Mix, Genre, UserProfile, User
 from rest_framework import serializers
+from rest_framework_simplejwt.serializers import TokenObtainPairSerializer
 
 
 class RegistrationSerializer(serializers.ModelSerializer):
@@ -11,7 +12,7 @@ class RegistrationSerializer(serializers.ModelSerializer):
         extra_kwargs = {
             'password': {'write_only': True}
         }
-
+    # override the save method to validate
     def save(self):
         user = User(
             email=self.validated_data['email'],
@@ -25,6 +26,17 @@ class RegistrationSerializer(serializers.ModelSerializer):
         user.set_password(password)
         user.save()
         return user
+
+# class MyTokenObtainPairSerializer(TokenObtainPairSerializer):
+#     # built in decorator- bound to its class rather than its object, gets evaluated after function is defined
+#     @classmethod
+#     def get_token(cls, user):
+#         token = super(MyTokenObtainPairSerializer, cls).get_token(user)
+
+#         # add custom claims
+#         token['username'] = user.username
+#         return token
+
 
 class HostSerializer(serializers.HyperlinkedModelSerializer):
     hosts = serializers.PrimaryKeyRelatedField(many=True, read_only=True)
