@@ -35,7 +35,7 @@ class Mix(models.Model):
     soundcloudplayer = models.CharField(max_length = 500)
     soundcloudlink = models.CharField(max_length = 300)
     soundclouduser = models.CharField(max_length = 300)
-    tracklist = ArrayField(ArrayField(models.CharField(max_length = 600)))
+    
     
     def __str__(self):
         return self.title

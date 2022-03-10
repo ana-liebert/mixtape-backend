@@ -49,7 +49,7 @@ class HostSerializer(serializers.HyperlinkedModelSerializer):
 class MixSerializer(serializers.ModelSerializer):
     class Meta:
         model = Mix
-        fields = ['id' ,'title', 'description', 'created_at', 'host', 'genre', 'image', 'soundcloudplayer', 'soundcloudlink', 'soundclouduser', 'tracklist']
+        fields = ['id' ,'title', 'description', 'created_at', 'host', 'image', 'soundcloudplayer', 'soundcloudlink', 'soundclouduser',]
 
 class GenreSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
