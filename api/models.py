@@ -31,11 +31,11 @@ class Mix(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     host = models.ForeignKey(Host, on_delete=models.CASCADE, related_name="hosts")
     image = models.CharField(max_length = 200)
-    genre = models.ManyToManyField(Genre)
+    genre = models.ManyToManyField(Genre, blank=True)
     soundcloudplayer = models.CharField(max_length = 500)
     soundcloudlink = models.CharField(max_length = 300)
     soundclouduser = models.CharField(max_length = 300)
-    tracklist = ArrayField(ArrayField(models.CharField(max_length = 600)))
+    
     
     def __str__(self):
         return self.title

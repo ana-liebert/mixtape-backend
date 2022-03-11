@@ -33,6 +33,9 @@ router.register(r'hosts', views.HostViewSet, 'hosts'),
 router.register(r'discover', views.GenreViewSet, 'discover'),
 router.register(r'profile', views.UserProfileViewSet, 'profile'),
 router.register(r'register', views.UserView, 'register'),
+# router.register(r'login', views.TokenObtainPairView, 'token_obtain_pair'),
+# router.register(r'login/refresh', views.TokenRefreshView, 'token_refresh'),
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
