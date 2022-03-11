@@ -38,7 +38,7 @@ class RegistrationSerializer(serializers.ModelSerializer):
 #         return token
 
 
-class HostSerializer(serializers.HyperlinkedModelSerializer):
+class HostSerializer(serializers.ModelSerializer):
     hosts = serializers.PrimaryKeyRelatedField(many=True, read_only=True)
 
     class Meta:
@@ -47,14 +47,16 @@ class HostSerializer(serializers.HyperlinkedModelSerializer):
 
 
 class MixSerializer(serializers.ModelSerializer):
+    genre = serializers.PrimaryKeyRelatedField(queryset=Genre.objects.all(), many=True)
     class Meta:
         model = Mix
-        fields = ['id' ,'title', 'description', 'created_at', 'host', 'genre', 'image', 'soundcloudplayer', 'soundcloudlink', 'soundclouduser', 'tracklist']
+        fields = ['id' ,'title', 'description', 'created_at', 'host', 'genre', 'image', 'soundcloudplayer', 'soundcloudlink', 'soundclouduser']
 
-class GenreSerializer(serializers.HyperlinkedModelSerializer):
+class GenreSerializer(serializers.ModelSerializer):
+    mix_list = MixSerializer(many=True, read_only=True)
     class Meta:
         model = Genre
-        fields = ['id', 'name']
+        fields = ['id', 'name', 'mix_list']
 
 class UserProfileSerializer(serializers.ModelSerializer):
     class Meta:
