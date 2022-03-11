@@ -14,7 +14,7 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path, include
+from django.urls import path, include, re_path
 from rest_framework import routers
 from api import views
 from django.contrib.auth import views as auth_views
@@ -33,8 +33,6 @@ router.register(r'hosts', views.HostViewSet, 'hosts'),
 router.register(r'discover', views.GenreViewSet, 'discover'),
 router.register(r'profile', views.UserProfileViewSet, 'profile'),
 router.register(r'register', views.UserView, 'register'),
-# router.register(r'login', views.TokenObtainPairView, 'token_obtain_pair'),
-# router.register(r'login/refresh', views.TokenRefreshView, 'token_refresh'),
 
 
 urlpatterns = [
@@ -42,6 +40,6 @@ urlpatterns = [
     path('mixtape/', include(router.urls)),
     path('login/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
     path('login/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
-    # path('login/', MyObtainTokenPairView.as_view(), name='token_obtain_pair'),
-    # path('login/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
+    re_path(r'^(?P<path>.*)/$', views.MixViewSet.as_view({'get': 'list'})),
+    path('/', views.MixViewSet.as_view({'get': 'list'})),
 ]
