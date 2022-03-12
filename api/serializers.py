@@ -1,6 +1,14 @@
 from .models import Host, Mix, Genre, UserProfile, User
 from rest_framework import serializers
 from rest_framework_simplejwt.serializers import TokenObtainPairSerializer
+# from django.contrib.auth import get_user_model
+
+# User = get_user_model()
+
+# class UserSerializer(serializers.ModelSerializer):
+#     class Meta:
+#         model = User
+#         exclude = ('password', )
 
 
 class RegistrationSerializer(serializers.ModelSerializer):
@@ -27,15 +35,6 @@ class RegistrationSerializer(serializers.ModelSerializer):
         user.save()
         return user
 
-# class MyTokenObtainPairSerializer(TokenObtainPairSerializer):
-#     # built in decorator- bound to its class rather than its object, gets evaluated after function is defined
-#     @classmethod
-#     def get_token(cls, user):
-#         token = super(MyTokenObtainPairSerializer, cls).get_token(user)
-
-#         # add custom claims
-#         token['username'] = user.username
-#         return token
 
 
 class HostSerializer(serializers.ModelSerializer):

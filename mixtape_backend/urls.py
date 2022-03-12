@@ -38,8 +38,9 @@ router.register(r'register', views.UserView, 'register'),
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('mixtape/', include(router.urls)),
-    path('login/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
-    path('login/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
+    path('token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
+    path('token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
     re_path(r'^(?P<path>.*)/$', views.MixViewSet.as_view({'get': 'list'})),
     path('/', views.MixViewSet.as_view({'get': 'list'})),
+    # path('me/', views.MeView.as_view(), name='me'),
 ]

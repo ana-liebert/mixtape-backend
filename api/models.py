@@ -3,10 +3,14 @@ from django.contrib.auth.models import User
 import time
 from django.contrib.postgres.fields import ArrayField
 
+# from django.contrib.auth import get_user_model
+
+# User = get_user_model()
+
 
 class Genre(models.Model):
     name = models.CharField(max_length = 150)
-    
+
     def __str__(self):
         return self.name
 
