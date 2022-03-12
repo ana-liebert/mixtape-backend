@@ -1,11 +1,9 @@
 from django.db import models
-from django.contrib.auth.models import User
 import time
+from django.conf import settings
 from django.contrib.postgres.fields import ArrayField
+# django user import
 
-# from django.contrib.auth import get_user_model
-
-# User = get_user_model()
 
 
 class Genre(models.Model):
@@ -39,11 +37,12 @@ class Mix(models.Model):
     soundcloudplayer = models.CharField(max_length = 500)
     soundcloudlink = models.CharField(max_length = 300)
     soundclouduser = models.CharField(max_length = 300)
+    creator = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name="mixpost")
     
     
     def __str__(self):
         return self.title
 
 class UserProfile(models.Model):
-    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    user = models.OneToOneField(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
     favorites = models.ManyToManyField(Mix, related_name='favorited_by')

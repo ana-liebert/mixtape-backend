@@ -32,12 +32,13 @@ router.register(r'mixes', views.MixViewSet, 'mixes'),
 router.register(r'hosts', views.HostViewSet, 'hosts'),
 router.register(r'discover', views.GenreViewSet, 'discover'),
 router.register(r'profile', views.UserProfileViewSet, 'profile'),
-router.register(r'register', views.UserView, 'register'),
+# router.register(r'register', views.UserView, 'register'),
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('mixtape/', include(router.urls)),
+    path('user/', include('users.urls', namespace='users')),
     path('token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
     path('token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
     re_path(r'^(?P<path>.*)/$', views.MixViewSet.as_view({'get': 'list'})),
