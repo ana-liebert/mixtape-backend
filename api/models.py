@@ -6,7 +6,7 @@ from django.contrib.postgres.fields import ArrayField
 
 class Genre(models.Model):
     name = models.CharField(max_length = 150)
-
+    
     def __str__(self):
         return self.name
 

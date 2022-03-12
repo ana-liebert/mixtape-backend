@@ -1,1 +1,1 @@
-web: gunicorn mixtape_backend.wsgi
+web: gunicorn backend.wsgi
