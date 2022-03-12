@@ -83,7 +83,6 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'mixtape2',
-        'USER': 'analiebert'
     }
 }
 
