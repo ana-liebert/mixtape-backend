@@ -20,7 +20,7 @@ SCHEDULE_CHOICES = (
 
 class Host(models.Model):
     name = models.CharField(max_length = 100)
-    bio = models.CharField(max_length = 300)
+    bio = models.CharField(max_length = 800)
     image = models.CharField(max_length = 200)
     schedule = models.CharField(max_length=50, choices=SCHEDULE_CHOICES)
 
@@ -35,8 +35,6 @@ class Mix(models.Model):
     image = models.CharField(max_length = 200)
     genre = models.ManyToManyField(Genre, blank=True)
     soundcloudplayer = models.CharField(max_length = 500)
-    soundcloudlink = models.CharField(max_length = 300)
-    soundclouduser = models.CharField(max_length = 300)
     creator = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name="mixpost")
     
     
