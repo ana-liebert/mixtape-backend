@@ -50,7 +50,7 @@ class MixSerializer(serializers.ModelSerializer):
     genre = serializers.PrimaryKeyRelatedField(queryset=Genre.objects.all(), many=True)
     class Meta:
         model = Mix
-        fields = ['id' ,'title', 'description', 'created_at', 'host', 'genre', 'image', 'soundcloudplayer', 'soundcloudlink', 'soundclouduser', 'creator']
+        fields = ['id' ,'title', 'description', 'created_at', 'host', 'genre', 'image', 'soundcloudplayer', 'creator']
 
 class GenreSerializer(serializers.ModelSerializer):
     mix_list = MixSerializer(many=True, read_only=True)
