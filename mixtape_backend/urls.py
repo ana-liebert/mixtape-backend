@@ -41,7 +41,7 @@ urlpatterns = [
     path('user/', include('users.urls', namespace='users')),
     path('token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
     path('token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
-    re_path(r'^(?P<path>.*)/$', views.MixViewSet.as_view({'get': 'list'})),
-    path('/', views.MixViewSet.as_view({'get': 'list'})),
-    # path('me/', views.MeView.as_view(), name='me'),
+    # re_path(r'^(?P<path>.*)/$', views.MixViewSet.as_view({'get': 'list'})),
+    # path('/', views.MixViewSet.as_view({'get': 'list'})),
+    
 ]
