@@ -1,10 +1,11 @@
 from django.shortcuts import render
 from django.views import View 
 from django.http import HttpResponse
-from .models import Host, Mix, Genre, UserProfile, User  
+from .models import Host, Mix, Genre, UserProfile 
 from rest_framework import viewsets
 from rest_framework import permissions
-from .serializers import MixSerializer, HostSerializer, GenreSerializer, UserProfileSerializer, RegistrationSerializer, UserSerializer 
+from .serializers import MixSerializer, HostSerializer, GenreSerializer, UserProfileSerializer
+# RegistrationSerializer, UserSerializer
 from rest_framework.permissions import AllowAny
 from rest_framework_simplejwt.views import TokenObtainPairView
 from rest_framework.views import APIView
@@ -55,6 +56,6 @@ class UserProfileViewSet(viewsets.ModelViewSet):
     queryset = UserProfile.objects.all()
     serializer_class = UserProfileSerializer
 
-class UserView(viewsets.ModelViewSet):
-    queryset = User.objects.all()
-    serializer_class = RegistrationSerializer
+# class UserView(viewsets.ModelViewSet):
+#     queryset = User.objects.all()
+#     serializer_class = RegistrationSerializer
