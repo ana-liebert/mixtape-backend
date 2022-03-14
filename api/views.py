@@ -17,6 +17,7 @@ from django.utils.decorators import method_decorator
 from rest_framework import filters
 
 
+
 # The SearchFilter class will only be applied if the view has a search_fields attribute set. The search_fields attribute should be a list of names of text type fields on the model, such as CharField or TextField.
 
 # from rest_framework import filters
@@ -60,9 +61,15 @@ class HostViewSet(viewsets.ModelViewSet):
 class MixViewSet(viewsets.ModelViewSet):
     queryset = Mix.objects.all().order_by('created_at')
     serializer_class = MixSerializer
-    permission_classes = [permissions.AllowAny]  
     filter_backends = [filters.SearchFilter]
     search_fields = ['title', 'host']
+
+class MixSearch(generics.ListAPIView):
+    queryset = Mix.objects.all()
+    serializer_class = MixSerializer
+    filter_backends = [filters.SearchFilter]
+    search_fields = ['title']
+    # http://localhost:8000/search/custom?search=mixtest
 
 
 

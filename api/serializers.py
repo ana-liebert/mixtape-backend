@@ -1,6 +1,9 @@
 from .models import Host, Mix, Genre, UserProfile
+from users.serializers import RegisterUserSerializer
 from rest_framework import serializers
 from rest_framework_simplejwt.serializers import TokenObtainPairSerializer
+
+
 
 
 
@@ -33,6 +36,10 @@ class GenreSerializer(serializers.ModelSerializer):
         fields = ['id', 'name', 'mix_list']
 
 class UserProfileSerializer(serializers.ModelSerializer):
+    favorites = MixSerializer(many=True, read_only=True)
+    user = RegisterUserSerializer(read_only=True)
+
     class Meta:
         model = UserProfile
-        fields = ['id', 'user', 'favorites']
+        fields = '__all__'
+        # fields = ['id', 'user', 'favorites', 'username', 'favorite_mix']
