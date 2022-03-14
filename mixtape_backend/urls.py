@@ -22,8 +22,7 @@ from rest_framework_simplejwt.views import (
     TokenObtainPairView,
     TokenRefreshView,
 )
-# from auth.views import MyObtainTokenPairView
-# from rest_framework_simplejwt.views import TokenRefreshView
+
 
 
 
@@ -32,7 +31,7 @@ router.register(r'mixes', views.MixViewSet, 'mixes'),
 router.register(r'hosts', views.HostViewSet, 'hosts'),
 router.register(r'discover', views.GenreViewSet, 'discover'),
 router.register(r'profile', views.UserProfileViewSet, 'profile'),
-# router.register(r'register', views.UserView, 'register'),
+
 
 
 urlpatterns = [
