@@ -42,5 +42,6 @@ urlpatterns = [
     path('token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
     re_path(r'^(?P<path>.*)/$', views.MixViewSet.as_view({'get': 'list'})),
     path('/', views.MixViewSet.as_view({'get': 'list'})),
+    path('search/', views.MixSearch.as_view(), name="listcreate"),
     
 ]

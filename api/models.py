@@ -36,7 +36,7 @@ class Mix(models.Model):
     genre = models.ManyToManyField(Genre, blank=True)
     soundcloudplayer = models.CharField(max_length = 500)
     creator = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name="mixpost")
-    # on_delete=models.CASCADE means if the primary key is deleted the mix wont be deleted 
+    # on_delete=models.PROTECT means if the primary key is deleted the mix wont be deleted 
     
     
     def __str__(self):
@@ -45,6 +45,12 @@ class Mix(models.Model):
 class UserProfile(models.Model):
     user = models.OneToOneField(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name='user')
     favorites = models.ManyToManyField(Mix, related_name='mixes')
-
+    
     def __str__ (self):
         return self.user
+    
+    def username(self):
+            return self.user.user_name
+    
+    def favorite_mix(self):
+            return self.favorites.title
