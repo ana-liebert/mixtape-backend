@@ -27,7 +27,7 @@ class MixSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Mix
-        fields = ['id' ,'title', 'description', 'created_at', 'host', 'genre', 'image', 'soundcloudplayer', 'creator']
+        fields = ['id' ,'title', 'description', 'created_at', 'host', 'genre', 'image', 'soundcloudplayer', 'creator', 'tracklist']
 
 class GenreSerializer(serializers.ModelSerializer):
     mix_list = MixSerializer(many=True, read_only=True)
@@ -42,4 +42,3 @@ class UserProfileSerializer(serializers.ModelSerializer):
     class Meta:
         model = UserProfile
         fields = '__all__'
-        # fields = ['id', 'user', 'favorites', 'username', 'favorite_mix']

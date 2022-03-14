@@ -43,5 +43,6 @@ urlpatterns = [
     re_path(r'^(?P<path>.*)/$', views.MixViewSet.as_view({'get': 'list'})),
     path('/', views.MixViewSet.as_view({'get': 'list'})),
     path('search/', views.MixSearch.as_view(), name="listcreate"),
+    # path('mixtape/profile', views.UserProfileView.as_view(), name="profile"),
     
 ]

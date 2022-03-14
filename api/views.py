@@ -83,11 +83,13 @@ class GenreViewSet(viewsets.ModelViewSet):
 class UserProfileViewSet(viewsets.ModelViewSet):
     queryset = UserProfile.objects.all()
     serializer_class = UserProfileSerializer
-    permission_classes = [permissions.AllowAny]  
 
 
-    # def get_queryset(self):
-    #     print(self)
-    #     print(self.request.user)
-    #     user = self.request.user
-    #     return UserProfile.objects.filter(user=user)
+# class UserProfileView(generics.ListAPIView):
+#     serializer_class = UserProfileSerializer
+
+#     def get_queryset(self):
+
+#         user = self.request.user
+#         print(user)
+#         return UserProfile.objects.filter(user=user)
