@@ -76,21 +76,51 @@ class MixSearch(generics.ListAPIView):
 
 class GenreViewSet(viewsets.ModelViewSet):  
     queryset = Genre.objects.all()
-    serializer_class = GenreSerializer
-    # permission_classes = [permissions.IsAuthenticatedOrReadOnly]  
+    serializer_class = GenreSerializer 
 
 
 class UserProfileViewSet(viewsets.ModelViewSet):
     queryset = UserProfile.objects.all()
     serializer_class = UserProfileSerializer
-    permission_classes = [IsAuthenticated]
+    # permission_classes = [IsAuthenticated]
+
+    def put(self, request, *args, **kwargs):
+        user_object = UserProfile.objects.get()
+
+        data = request.data
+        user_object.user = data["user"]
+        user_object.favorites = data["mixes"] # or maybe mixes...?
+
+        user_object.save()
+
+        serializer = UserProfileSerializer
+        return Response(serializer.data)
 
 
-# class UserProfileView(generics.ListAPIView):
+# class UserProfileList(generics.ListAPIView):
+
+#     queryset = UserProfile.objects.all()
 #     serializer_class = UserProfileSerializer
 
-#     def get_queryset(self):
+# class UserProfileIndvList(generics.ListAPIView):
 
-#         user = self.request.user
-#         print(user)
-#         return UserProfile.objects.filter(user=user)
+#     queryset = UserProfile.objects.all()
+#     serializer_class = UserProfileSerializer
+
+# class UserProfileUpdate(generics.UpdateAPIView):
+
+#     # def put(self, request, *args, **kwargs):
+#     #     user_object = UserProfile.objects.get()
+
+#     #     data = request.data
+#     #     user_object.user = data["user"]
+#     #     user_object.favorites = data["favorites"] # or maybe mixes...?
+
+#     #     user_object.save()
+
+#     #     serializer = UserProfileSerializer
+#     #     return Response(serializer.data)
+
+#     serializer_class = UserProfileSerializer
+#     queryset = UserProfile.objects.all()
+

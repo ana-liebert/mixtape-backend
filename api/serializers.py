@@ -17,14 +17,7 @@ class HostSerializer(serializers.ModelSerializer):
 
 class MixSerializer(serializers.ModelSerializer):
     genre = serializers.PrimaryKeyRelatedField(queryset=Genre.objects.all(), many=True)
-    # For many-to-many relationships set() accepts a list of either model instances or field values, normally primary keys, as the objs argument.
-    # genre = serializers.SlugRelatedField(
-    #     many=True,
-    #     read_only=False,
-    #     slug_field='genre_name',
-    #     queryset=Genre.objects.all()
-    # )
-
+    # genre = GenreSerializer(many=True, read_only=True)
     class Meta:
         model = Mix
         fields = ['id' ,'title', 'description', 'created_at', 'host', 'genre', 'image', 'soundcloudplayer', 'creator', 'tracklist']

@@ -19,6 +19,19 @@ class CustomUserCreate(APIView):
         return Response(reg_serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 
+# class CustomUserUpdate(UpdateAPIView):
+#     permission_classes = [AllowAny]
+#     # allow any here so no one is restricted from creating a login
+
+#     def post(self, request):
+#         reg_serializer = RegisterUserSerializer(data=request.data)
+#         if reg_serializer.is_valid():
+#             newuser = reg_serializer.save()
+#             if newuser:
+#                 return Response(status=status.HTTP_201_CREATED)
+#         return Response(reg_serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+
 class BlacklistTokenView(APIView):
     permission_classes = [AllowAny]
 

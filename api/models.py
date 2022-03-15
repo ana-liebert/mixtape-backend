@@ -48,7 +48,7 @@ class UserProfile(models.Model):
     favorites = models.ManyToManyField(Mix, related_name='mixes')
     
     # def __str__ (self):
-    #     return self.user
+    #     return self.user.name
     
     # def username(self):
     #         return self.user.user_name
