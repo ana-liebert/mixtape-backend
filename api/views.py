@@ -6,10 +6,10 @@ from rest_framework import viewsets
 from rest_framework import permissions
 from .serializers import MixSerializer, HostSerializer, GenreSerializer, UserProfileSerializer
 from users.models import NewUser
-from rest_framework.permissions import AllowAny
+from rest_framework.permissions import AllowAny, IsAuthenticated, IsAdminUser
+from rest_framework.permissions import IsAdminUser
 from rest_framework_simplejwt.views import TokenObtainPairView
 from rest_framework.views import APIView
-from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
 from rest_framework import generics
 from django.contrib.auth.decorators import login_required
@@ -83,6 +83,7 @@ class GenreViewSet(viewsets.ModelViewSet):
 class UserProfileViewSet(viewsets.ModelViewSet):
     queryset = UserProfile.objects.all()
     serializer_class = UserProfileSerializer
+    permission_classes = [IsAuthenticated]
 
 
 # class UserProfileView(generics.ListAPIView):
