@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "a155cf620a33b72b249c5c733712003a4872d3e2a02848ee48f3b36dbf274790"
+            "sha256": "dc46c9c65c45e623914f451d70670bd1832871fde9af0f40ab236a5187eec169"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -58,11 +58,19 @@
         },
         "django": {
             "hashes": [
-                "sha256:1239218849e922033a35d2a2f777cb8bee18bd725416744074f455f34ff50d0c",
-                "sha256:77ff2e7050e3324c9b67e29b6707754566f58514112a9ac73310f60cd5261930"
+                "sha256:110fb58fb12eca59e072ad59fc42d771cd642dd7a2f2416582aa9da7a8ef954a",
+                "sha256:996495c58bff749232426c88726d8cd38d24c94d7c1d80835aafffa9bc52985a"
             ],
             "index": "pypi",
-            "version": "==4.0.3"
+            "version": "==4.0.2"
+        },
+        "django-bootstrap-icons": {
+            "hashes": [
+                "sha256:b37f806562d10b208cddea100c31f9370f5e15826425042185614ebbbf24453d",
+                "sha256:e8a6d57b5f6fe729321734ffa49085c603699cbdb4326729ad26b0d72da097f7"
+            ],
+            "index": "pypi",
+            "version": "==0.7.7"
         },
         "django-cors-headers": {
             "hashes": [
@@ -79,6 +87,22 @@
             ],
             "index": "pypi",
             "version": "==0.3.1"
+        },
+        "django-icons": {
+            "hashes": [
+                "sha256:519065feba4172f3e466be09e228c3746256aa63857b35bd64151500a76ba684",
+                "sha256:a72b55689610357b5e83724b6b41606b9daba87f24454ed48eb3293915dbd64e"
+            ],
+            "index": "pypi",
+            "version": "==21.3"
+        },
+        "django-on-heroku": {
+            "hashes": [
+                "sha256:4a72ade056335112cba22eea332552d840b718dd8140d43c2d70bb739875955b",
+                "sha256:a41fe83ef7ecb022ca92b2950a61f79fef156e58f4f35fc7fc4ecacdc5225fb8"
+            ],
+            "index": "pypi",
+            "version": "==1.1.2"
         },
         "djangorestframework": {
             "hashes": [
@@ -98,11 +122,11 @@
         },
         "filelock": {
             "hashes": [
-                "sha256:9cd540a9352e432c7246a48fe4e8712b10acb1df2ad1f30e8c070b82ae1fed85",
-                "sha256:f8314284bfffbdcfa0ff3d7992b023d4c628ced6feb957351d4c48d059f56bc0"
+                "sha256:38b4f4c989f9d06d44524df1b24bd19e167d851f19b50bf3e3559952dddc5b80",
+                "sha256:cf0fc6a2f8d26bd900f19bf33915ca70ba4dd8c56903eeb14e1e7a2fd7590146"
             ],
             "index": "pypi",
-            "version": "==3.6.0"
+            "version": "==3.4.2"
         },
         "gunicorn": {
             "hashes": [
@@ -138,11 +162,11 @@
         },
         "platformdirs": {
             "hashes": [
-                "sha256:7535e70dfa32e84d4b34996ea99c5e432fa29a708d0f4e394bbcb2a8faa4f16d",
-                "sha256:bcae7cab893c2d310a711b70b24efb93334febe65f8de776ee320b517471e227"
+                "sha256:1d7385c7db91728b83efd0ca99a5afb296cab9d0ed8313a45ed8ba17967ecfca",
+                "sha256:440633ddfebcc36264232365d7840a970e75e1018d15b4327d11f91909045fda"
             ],
             "index": "pypi",
-            "version": "==2.5.1"
+            "version": "==2.4.1"
         },
         "psycopg2": {
             "hashes": [
@@ -289,11 +313,11 @@
         },
         "virtualenv": {
             "hashes": [
-                "sha256:dd448d1ded9f14d1a4bfa6bfc0c5b96ae3be3f2d6c6c159b23ddcfd701baa021",
-                "sha256:e9dd1a1359d70137559034c0f5433b34caf504af2dc756367be86a5a32967134"
+                "sha256:339f16c4a86b44240ba7223d0f93a7887c3ca04b5f9c8129da7958447d079b09",
+                "sha256:d8458cf8d59d0ea495ad9b34c2599487f8a7772d796f9910858376d1600dd2dd"
             ],
             "index": "pypi",
-            "version": "==20.13.3"
+            "version": "==20.13.0"
         },
         "virtualenv-clone": {
             "hashes": [
