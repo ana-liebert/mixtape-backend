@@ -137,6 +137,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 CORS_ORIGIN_WHITELIST = [
     'http://localhost:3000',
+    'https://inspiring-lamport-ed6060.netlify.app'
 ]
 
 REST_FRAMEWORK = {
