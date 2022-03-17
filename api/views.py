@@ -59,7 +59,7 @@ class HostViewSet(viewsets.ModelViewSet):
 #     search_fields = ['title', 'host']
 
 class MixViewSet(viewsets.ModelViewSet):
-    queryset = Mix.objects.all().order_by('created_at')
+    queryset = Mix.objects.all().order_by('-created_at')
     serializer_class = MixSerializer
     filter_backends = [filters.SearchFilter]
     search_fields = ['title', 'host']

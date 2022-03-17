@@ -34,6 +34,7 @@ PyJWT = "==2.3.0"
 django-bootstrap-icons = "==0.7.7"
 django-icons = "==21.3"
 django-on-heroku = "==1.1.2"
+django-filter = "==21.1"
 
 [dev-packages]
 
