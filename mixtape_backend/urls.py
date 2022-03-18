@@ -27,16 +27,16 @@ from rest_framework_simplejwt.views import (
 
 
 router = routers.DefaultRouter()
-router.register(r'mixes', views.MixViewSet, 'mixes'),
-router.register(r'hosts', views.HostViewSet, 'hosts'),
-router.register(r'discover', views.GenreViewSet, 'discover'),
-router.register(r'profile', views.UserProfileViewSet, 'profile'),
+router.register(r'mixtape/mixes', views.MixViewSet, 'mixes'),
+router.register(r'mixtape/hosts', views.HostViewSet, 'hosts'),
+router.register(r'mixtape/discover', views.GenreViewSet, 'discover'),
+router.register(r'mixtape/profile', views.UserProfileViewSet, 'profile'),
 
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('mixtape/', include(router.urls)),
+    path('', include(router.urls)),
     path('user/', include('users.urls', namespace='users')),
     path('token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
     path('token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
