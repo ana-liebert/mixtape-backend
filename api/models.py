@@ -2,7 +2,6 @@ from django.db import models
 import time
 from django.conf import settings
 from django.contrib.postgres.fields import ArrayField
-# django user import
 
 
 
@@ -37,7 +36,6 @@ class Mix(models.Model):
     soundcloudplayer = models.CharField(max_length = 500)
     creator = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name="mixpost")
     tracklist = models.TextField(max_length = 1000, blank=True, default="N/A")
-    # on_delete=models.PROTECT means if the primary key is deleted the mix wont be deleted 
     
     
     def __str__(self):
@@ -46,12 +44,3 @@ class Mix(models.Model):
 class UserProfile(models.Model):
     user = models.OneToOneField(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name='user')
     favorites = models.ManyToManyField(Mix, related_name='mixes')
-    
-    # def __str__ (self):
-    #     return self.user.name
-    
-    # def username(self):
-    #         return self.user.user_name
-    
-    # def favorite_mix(self):
-    #         return self.favorites.title

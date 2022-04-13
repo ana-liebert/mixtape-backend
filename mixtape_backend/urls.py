@@ -41,9 +41,6 @@ urlpatterns = [
     path('token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
     path('token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
     path('search/', views.MixSearch.as_view(), name="listcreate"),
-    # path('profile/', views.UserProfileList.as_view(), name="profile"),
-    # path('profile/<int:pk>/', views.UserProfileUpdate.as_view(), name="profile"),
-    # path('profile/<int:pk>/', views.UserProfileIndvList.as_view(), name="profile"),
     re_path(r'^(?P<path>.*)/$', views.MixViewSet.as_view({'get': 'list'})),
     path('/', views.MixViewSet.as_view({'get': 'list'})),
     
