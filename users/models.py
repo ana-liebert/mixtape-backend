@@ -5,7 +5,6 @@ from django.contrib.auth.models import AbstractBaseUser, PermissionsMixin, BaseU
 
 # Create your models here.
 
-# handle normal users and super users
 class CustomAccountManager(BaseUserManager):
     def create_superuser(self, email, user_name, first_name, password, **other_fields):
 

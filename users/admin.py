@@ -20,9 +20,6 @@ class UserAdminConfig(UserAdmin):
         ('Personal', {'fields': ('about',)}),
     )
 
-    # formfield_overrides = {
-    #     models.TextField: {'widget': Textarea(attrs={'rows': 20, 'cols': 60})},
-    # }
     add_fieldsets = (
         (None, {
             'classes': ('wide',),
