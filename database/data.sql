@@ -1,446 +1,446 @@
--- INSERT INTO api_host(name, bio, image, schedule)
---   VALUES
---     (
---     'Courtesy',
---     'Kulør labelhead Courtesy stops by, bringing the sound of Copenhagen to the LDN studio for a power hour…',
---     'https://media.ntslive.co.uk/resize/1600x1600/863e20be-1ef0-4ab9-8cf6-a6a4aa8b2fd2_1647216000.jpeg',
---     'Guest Spot'
---     );
--- INSERT INTO api_host(name, bio, image, schedule)
---   VALUES
---     (
---     'Eastern Margins',
---     'Regular transmissions from the London crew showcasing music from the margins of East & South-East Asia and its diaspora.',
---     'https://media2.ntslive.co.uk/resize/1600x1600/ac824f3f-2c21-4380-8fbf-aa63a5ed6524_1560816000.png',
---     'Monthly'
---     );
--- INSERT INTO api_host(name, bio, image, schedule)
---   VALUES
---     (
---     'LRain',
---     'Taja Cheek, known professionally as LRain, is an American experimentalist, multi-instrumentalist, composer, and curator known primarily as the lead vocalist and songwriter of her eponymous band.',
---     'https://media2.ntslive.co.uk/resize/1600x1600/559d61a9-f193-42f0-9708-64b51471caf5_1624492800.jpeg',
---     'Monthly'
---     );
+INSERT INTO api_host(name, bio, image, schedule)
+  VALUES
+    (
+    'Courtesy',
+    'Kulør labelhead Courtesy stops by, bringing the sound of Copenhagen to the LDN studio for a power hour…',
+    'https://media.ntslive.co.uk/resize/1600x1600/863e20be-1ef0-4ab9-8cf6-a6a4aa8b2fd2_1647216000.jpeg',
+    'Guest Spot'
+    );
+INSERT INTO api_host(name, bio, image, schedule)
+  VALUES
+    (
+    'Eastern Margins',
+    'Regular transmissions from the London crew showcasing music from the margins of East & South-East Asia and its diaspora.',
+    'https://media2.ntslive.co.uk/resize/1600x1600/ac824f3f-2c21-4380-8fbf-aa63a5ed6524_1560816000.png',
+    'Monthly'
+    );
+INSERT INTO api_host(name, bio, image, schedule)
+  VALUES
+    (
+    'LRain',
+    'Taja Cheek, known professionally as LRain, is an American experimentalist, multi-instrumentalist, composer, and curator known primarily as the lead vocalist and songwriter of her eponymous band.',
+    'https://media2.ntslive.co.uk/resize/1600x1600/559d61a9-f193-42f0-9708-64b51471caf5_1624492800.jpeg',
+    'Monthly'
+    );
 
--- INSERT INTO api_genre(name)
---   VALUES
---     (
---     'Trance'
---     );
+INSERT INTO api_genre(name)
+  VALUES
+    (
+    'Trance'
+    );
 
--- INSERT INTO api_genre(name)
---   VALUES
---     (
---     'Techno'
---     );
+INSERT INTO api_genre(name)
+  VALUES
+    (
+    'Techno'
+    );
 
--- INSERT INTO api_genre(name)
---   VALUES
---     (
---     'Acid'
---     );
+INSERT INTO api_genre(name)
+  VALUES
+    (
+    'Acid'
+    );
 
--- INSERT INTO api_genre(name)
---   VALUES
---     (
---     'Synth Pop'
---     );
+INSERT INTO api_genre(name)
+  VALUES
+    (
+    'Synth Pop'
+    );
 
--- INSERT INTO api_genre(name)
---   VALUES
---     (
---     'Cold Wave'
---     );
+INSERT INTO api_genre(name)
+  VALUES
+    (
+    'Cold Wave'
+    );
 
--- INSERT INTO api_genre(name)
---   VALUES
---     (
---     'Dark Wave'
---     );
---     INSERT INTO api_genre(name)
---   VALUES
---     (
---     'Post Punk'
---     );
---     INSERT INTO api_genre(name)
---   VALUES
---     (
---     'Club'
---     );
---     INSERT INTO api_genre(name)
---   VALUES
---     (
---     'Drum and Bass'
---     );
---     INSERT INTO api_genre(name)
---   VALUES
---     (
---     'Garage'
---     );
---     INSERT INTO api_genre(name)
---   VALUES
---     (
---     'Ambient'
---     );
---     INSERT INTO api_genre(name)
---   VALUES
---     (
---     'Electronica'
---     );
---     INSERT INTO api_genre(name)
---   VALUES
---     (
---     'Trip Hop'
---     );
---     INSERT INTO api_genre(name)
---   VALUES
---     (
---     'Afro Beats'
---     );
+INSERT INTO api_genre(name)
+  VALUES
+    (
+    'Dark Wave'
+    );
+    INSERT INTO api_genre(name)
+  VALUES
+    (
+    'Post Punk'
+    );
+    INSERT INTO api_genre(name)
+  VALUES
+    (
+    'Club'
+    );
+    INSERT INTO api_genre(name)
+  VALUES
+    (
+    'Drum and Bass'
+    );
+    INSERT INTO api_genre(name)
+  VALUES
+    (
+    'Garage'
+    );
+    INSERT INTO api_genre(name)
+  VALUES
+    (
+    'Ambient'
+    );
+    INSERT INTO api_genre(name)
+  VALUES
+    (
+    'Electronica'
+    );
+    INSERT INTO api_genre(name)
+  VALUES
+    (
+    'Trip Hop'
+    );
+    INSERT INTO api_genre(name)
+  VALUES
+    (
+    'Afro Beats'
+    );
 
--- INSERT INTO api_genre(name)
---   VALUES
---     (
---     'Batida'
---     );
+INSERT INTO api_genre(name)
+  VALUES
+    (
+    'Batida'
+    );
 
--- INSERT INTO api_genre(name)
---   VALUES
---     (
---     'Footwork'
---     );
---     INSERT INTO api_genre(name)
---   VALUES
---     (
---     'Hyper Pop'
---     );
+INSERT INTO api_genre(name)
+  VALUES
+    (
+    'Footwork'
+    );
+    INSERT INTO api_genre(name)
+  VALUES
+    (
+    'Hyper Pop'
+    );
 
--- INSERT INTO api_genre(name)
---   VALUES
---     (
---     'Kwaito'
---     );
---     INSERT INTO api_genre(name)
---   VALUES
---     (
---     'Singeli'
---     );
---     INSERT INTO api_genre(name)
---   VALUES
---     (
---     'Balie Funk'
---     );
---     INSERT INTO api_genre(name)
---   VALUES
---     (
---     'Jungle'
---     );
---     INSERT INTO api_genre(name)
---   VALUES
---     (
---     'Speed Garage'
---     );
---     INSERT INTO api_genre(name)
---   VALUES
---     (
---     'Breakbeat Hardcore'
---     );
---     INSERT INTO api_genre(name)
---   VALUES
---     (
---     'Chicago House'
---     );
--- INSERT INTO api_genre(name)
---   VALUES
---     (
---     'Detroit Techno'
---     );
--- INSERT INTO api_genre(name)
---   VALUES
---     (
---     'Leftfield House'
---     );
--- INSERT INTO api_genre(name)
---   VALUES
---     (
---     'Leftfield Techno'
---     );
--- INSERT INTO api_genre(name)
---   VALUES
---     (
---     'Ambient Techno'
---     );
--- INSERT INTO api_genre(name)
---   VALUES
---     (
---     'Gabber'
---     );
--- INSERT INTO api_genre(name)
---   VALUES
---     (
---     'Breaks'
---     );
--- INSERT INTO api_genre(name)
---   VALUES
---     (
---     'Minimal Techno'
---     );
--- INSERT INTO api_genre(name)
---   VALUES
---     (
---     'Broken Beat'
---     );
--- INSERT INTO api_genre(name)
---   VALUES
---     (
---     'Electro'
---     );
--- INSERT INTO api_genre(name)
---   VALUES
---     (
---     'Hardstyle'
---     );
--- INSERT INTO api_genre(name)
---   VALUES
---     (
---     'House'
---     );
--- INSERT INTO api_genre(name)
---   VALUES
---     (
---     'Deep House'
---     );
--- INSERT INTO api_genre(name)
---   VALUES
---     (
---     'Goth Rock'
---     );
--- INSERT INTO api_genre(name)
---   VALUES
---     (
---     'EBM'
---     );
--- INSERT INTO api_genre(name)
---   VALUES
---     (
---     'Industrial'
---     );
--- INSERT INTO api_genre(name)
---   VALUES
---     (
---     'New Wave'
---     );
--- INSERT INTO api_genre(name)
---   VALUES
---     (
---     'Dream Pop'
---     );
--- INSERT INTO api_genre(name)
---   VALUES
---     (
---     'Noise Rock'
---     );
--- INSERT INTO api_genre(name)
---   VALUES
---     (
---     'Grunge'
---     );
--- INSERT INTO api_genre(name)
---   VALUES
---     (
---     'Indie Rock'
---     );
--- INSERT INTO api_genre(name)
---   VALUES
---     (
---     'Shoegaze'
---     );
--- INSERT INTO api_genre(name)
---   VALUES
---     (
---     'Punk'
---     );
--- INSERT INTO api_genre(name)
---   VALUES
---     (
---     'Hardcode Punk'
---     );
--- INSERT INTO api_genre(name)
---   VALUES
---     (
---     'Psychedelic Rock'
---     );
--- INSERT INTO api_genre(name)
---   VALUES
---     (
---     'Folk'
---     );
--- INSERT INTO api_genre(name)
---   VALUES
---     (
---     'Surf'
---     );
--- INSERT INTO api_genre(name)
---   VALUES
---     (
---     'Power Pop'
---     );
--- INSERT INTO api_genre(name)
---   VALUES
---     (
---     'Funk'
---     );
--- INSERT INTO api_genre(name)
---   VALUES
---     (
---     'Gospel'
---     );
--- INSERT INTO api_genre(name)
---   VALUES
---     (
---     'Soul'
---     );
--- INSERT INTO api_genre(name)
---   VALUES
---     (
---     'Blues'
---     );
--- INSERT INTO api_genre(name)
---   VALUES
---     (
---     'Doo Wop'
---     );
--- INSERT INTO api_genre(name)
---   VALUES
---     (
---     'Motown Soul'
---     );
--- INSERT INTO api_genre(name)
---   VALUES
---     (
---     'Rare Groove'
---     );
--- INSERT INTO api_genre(name)
---   VALUES
---     (
---     'Boogie'
---     );
--- INSERT INTO api_genre(name)
---   VALUES
---     (
---     'Classic Disco'
---     );
--- INSERT INTO api_genre(name)
---   VALUES
---     (
---     'Leftfield Disco'
---     );
--- INSERT INTO api_genre(name)
---   VALUES
---     (
---     'Italo'
---     );
--- INSERT INTO api_genre(name)
---   VALUES
---     (
---     'Afro Disco'
---     );
--- INSERT INTO api_genre(name)
---   VALUES
---     (
---     'Arabic Pop'
---     );
--- INSERT INTO api_genre(name)
---   VALUES
---     (
---     'Ethiopiques'
---     );
--- INSERT INTO api_genre(name)
---   VALUES
---     (
---     'Sudanese Pop'
---     );
--- INSERT INTO api_genre(name)
---   VALUES
---     (
---     'Sahara Blues'
---     );
--- INSERT INTO api_genre(name)
---   VALUES
---     (
---     'Turkish Disco'
---     );
--- INSERT INTO api_genre(name)
---   VALUES
---     (
---     'South African Jazz'
---     );
--- INSERT INTO api_genre(name)
---   VALUES
---     (
---     'Bollywood'
---     );
--- INSERT INTO api_genre(name)
---   VALUES
---     (
---     'K-Pop'
---     );
--- INSERT INTO api_genre(name)
---   VALUES
---     (
---     'Persian Pop'
---     );
--- INSERT INTO api_genre(name)
---   VALUES
---     (
---     'Classical'
---     );
--- INSERT INTO api_genre(name)
---   VALUES
---     (
---     'Opera'
---     );
--- INSERT INTO api_genre(name)
---   VALUES
---     (
---     'Celtic Folk'
---     );
--- INSERT INTO api_genre(name)
---   VALUES
---     (
---     'Portugese Fado'
---     );
--- INSERT INTO api_genre(name)
---   VALUES
---     (
---     'Bossa Nova'
---     );
--- INSERT INTO api_genre(name)
---   VALUES
---     (
---     'Cumbia'
---     );
--- INSERT INTO api_genre(name)
---   VALUES
---     (
---     'Flamenco'
---     );
--- INSERT INTO api_genre(name)
---   VALUES
---     (
---     'Salsa'
---     );
--- INSERT INTO api_genre(name)
---   VALUES
---     (
---     'Contemporary Jazz'
---     );
--- INSERT INTO api_genre(name)
---   VALUES
---     (
---     'Ambient Jazz'
---     );
+INSERT INTO api_genre(name)
+  VALUES
+    (
+    'Kwaito'
+    );
+    INSERT INTO api_genre(name)
+  VALUES
+    (
+    'Singeli'
+    );
+    INSERT INTO api_genre(name)
+  VALUES
+    (
+    'Balie Funk'
+    );
+    INSERT INTO api_genre(name)
+  VALUES
+    (
+    'Jungle'
+    );
+    INSERT INTO api_genre(name)
+  VALUES
+    (
+    'Speed Garage'
+    );
+    INSERT INTO api_genre(name)
+  VALUES
+    (
+    'Breakbeat Hardcore'
+    );
+    INSERT INTO api_genre(name)
+  VALUES
+    (
+    'Chicago House'
+    );
+INSERT INTO api_genre(name)
+  VALUES
+    (
+    'Detroit Techno'
+    );
+INSERT INTO api_genre(name)
+  VALUES
+    (
+    'Leftfield House'
+    );
+INSERT INTO api_genre(name)
+  VALUES
+    (
+    'Leftfield Techno'
+    );
+INSERT INTO api_genre(name)
+  VALUES
+    (
+    'Ambient Techno'
+    );
+INSERT INTO api_genre(name)
+  VALUES
+    (
+    'Gabber'
+    );
+INSERT INTO api_genre(name)
+  VALUES
+    (
+    'Breaks'
+    );
+INSERT INTO api_genre(name)
+  VALUES
+    (
+    'Minimal Techno'
+    );
+INSERT INTO api_genre(name)
+  VALUES
+    (
+    'Broken Beat'
+    );
+INSERT INTO api_genre(name)
+  VALUES
+    (
+    'Electro'
+    );
+INSERT INTO api_genre(name)
+  VALUES
+    (
+    'Hardstyle'
+    );
+INSERT INTO api_genre(name)
+  VALUES
+    (
+    'House'
+    );
+INSERT INTO api_genre(name)
+  VALUES
+    (
+    'Deep House'
+    );
+INSERT INTO api_genre(name)
+  VALUES
+    (
+    'Goth Rock'
+    );
+INSERT INTO api_genre(name)
+  VALUES
+    (
+    'EBM'
+    );
+INSERT INTO api_genre(name)
+  VALUES
+    (
+    'Industrial'
+    );
+INSERT INTO api_genre(name)
+  VALUES
+    (
+    'New Wave'
+    );
+INSERT INTO api_genre(name)
+  VALUES
+    (
+    'Dream Pop'
+    );
+INSERT INTO api_genre(name)
+  VALUES
+    (
+    'Noise Rock'
+    );
+INSERT INTO api_genre(name)
+  VALUES
+    (
+    'Grunge'
+    );
+INSERT INTO api_genre(name)
+  VALUES
+    (
+    'Indie Rock'
+    );
+INSERT INTO api_genre(name)
+  VALUES
+    (
+    'Shoegaze'
+    );
+INSERT INTO api_genre(name)
+  VALUES
+    (
+    'Punk'
+    );
+INSERT INTO api_genre(name)
+  VALUES
+    (
+    'Hardcode Punk'
+    );
+INSERT INTO api_genre(name)
+  VALUES
+    (
+    'Psychedelic Rock'
+    );
+INSERT INTO api_genre(name)
+  VALUES
+    (
+    'Folk'
+    );
+INSERT INTO api_genre(name)
+  VALUES
+    (
+    'Surf'
+    );
+INSERT INTO api_genre(name)
+  VALUES
+    (
+    'Power Pop'
+    );
+INSERT INTO api_genre(name)
+  VALUES
+    (
+    'Funk'
+    );
+INSERT INTO api_genre(name)
+  VALUES
+    (
+    'Gospel'
+    );
+INSERT INTO api_genre(name)
+  VALUES
+    (
+    'Soul'
+    );
+INSERT INTO api_genre(name)
+  VALUES
+    (
+    'Blues'
+    );
+INSERT INTO api_genre(name)
+  VALUES
+    (
+    'Doo Wop'
+    );
+INSERT INTO api_genre(name)
+  VALUES
+    (
+    'Motown Soul'
+    );
+INSERT INTO api_genre(name)
+  VALUES
+    (
+    'Rare Groove'
+    );
+INSERT INTO api_genre(name)
+  VALUES
+    (
+    'Boogie'
+    );
+INSERT INTO api_genre(name)
+  VALUES
+    (
+    'Classic Disco'
+    );
+INSERT INTO api_genre(name)
+  VALUES
+    (
+    'Leftfield Disco'
+    );
+INSERT INTO api_genre(name)
+  VALUES
+    (
+    'Italo'
+    );
+INSERT INTO api_genre(name)
+  VALUES
+    (
+    'Afro Disco'
+    );
+INSERT INTO api_genre(name)
+  VALUES
+    (
+    'Arabic Pop'
+    );
+INSERT INTO api_genre(name)
+  VALUES
+    (
+    'Ethiopiques'
+    );
+INSERT INTO api_genre(name)
+  VALUES
+    (
+    'Sudanese Pop'
+    );
+INSERT INTO api_genre(name)
+  VALUES
+    (
+    'Sahara Blues'
+    );
+INSERT INTO api_genre(name)
+  VALUES
+    (
+    'Turkish Disco'
+    );
+INSERT INTO api_genre(name)
+  VALUES
+    (
+    'South African Jazz'
+    );
+INSERT INTO api_genre(name)
+  VALUES
+    (
+    'Bollywood'
+    );
+INSERT INTO api_genre(name)
+  VALUES
+    (
+    'K-Pop'
+    );
+INSERT INTO api_genre(name)
+  VALUES
+    (
+    'Persian Pop'
+    );
+INSERT INTO api_genre(name)
+  VALUES
+    (
+    'Classical'
+    );
+INSERT INTO api_genre(name)
+  VALUES
+    (
+    'Opera'
+    );
+INSERT INTO api_genre(name)
+  VALUES
+    (
+    'Celtic Folk'
+    );
+INSERT INTO api_genre(name)
+  VALUES
+    (
+    'Portugese Fado'
+    );
+INSERT INTO api_genre(name)
+  VALUES
+    (
+    'Bossa Nova'
+    );
+INSERT INTO api_genre(name)
+  VALUES
+    (
+    'Cumbia'
+    );
+INSERT INTO api_genre(name)
+  VALUES
+    (
+    'Flamenco'
+    );
+INSERT INTO api_genre(name)
+  VALUES
+    (
+    'Salsa'
+    );
+INSERT INTO api_genre(name)
+  VALUES
+    (
+    'Contemporary Jazz'
+    );
+INSERT INTO api_genre(name)
+  VALUES
+    (
+    'Ambient Jazz'
+    );
 
 INSERT INTO api_mix(title, description, created_at, image, soundcloudplayer, creator_id, host_id, tracklist)
   VALUES
@@ -782,17 +782,17 @@ Love Doc'
 
 );
 
--- INSERT INTO api_userprofile(user_id)
---   VALUES
---     (
---     '1'
---     );
+INSERT INTO api_userprofile(user_id)
+  VALUES
+    (
+    '1'
+    );
 
 
 
--- INSERT INTO api_userprofile_favorites(userprofile_id, mix_id)
---   VALUES
---     (
---     '1',
---     '1'
---     );
+INSERT INTO api_userprofile_favorites(userprofile_id, mix_id)
+  VALUES
+    (
+    '1',
+    '1'
+    );
