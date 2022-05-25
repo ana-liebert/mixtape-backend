@@ -30,13 +30,13 @@ router = routers.DefaultRouter()
 router.register(r'mixtape/mixes', views.MixViewSet, 'mixes'),
 router.register(r'mixtape/hosts', views.HostViewSet, 'hosts'),
 router.register(r'mixtape/discover', views.GenreViewSet, 'discover'),
-router.register(r'mixtape/profile', views.UserProfileViewSet, 'profile'),
 
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include(router.urls)),
+    path('mixtape/profile/', views.MixList.as_view()),
     path('user/', include('users.urls', namespace='users')),
     path('token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
     path('token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),

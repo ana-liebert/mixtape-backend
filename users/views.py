@@ -4,6 +4,8 @@ from rest_framework.views import APIView
 from .serializers import RegisterUserSerializer
 from rest_framework.permissions import AllowAny
 from rest_framework_simplejwt.tokens import RefreshToken
+from .models import NewUser
+from rest_framework import viewsets
 
 
 class CustomUserCreate(APIView):
@@ -30,3 +32,9 @@ class BlacklistTokenView(APIView):
             token.blacklist()
         except Exception as e:
             return Response(status=status.HTTP_400_BAD_REQUEST)
+
+
+
+class UserViewSet(viewsets.ModelViewSet):  
+    queryset = NewUser.objects.all()  
+    serializer_class = RegisterUserSerializer
