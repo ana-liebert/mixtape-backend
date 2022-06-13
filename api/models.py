@@ -35,7 +35,6 @@ class Mix(models.Model):
     genre = models.ManyToManyField(Genre, blank=True)
     soundcloudplayer = models.CharField(max_length = 500)
     creator = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name="mixpost")
-    tracklist = models.TextField(max_length = 1000, blank=True, default="N/A")
     
     
     def __str__(self):
